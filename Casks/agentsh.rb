@@ -1,6 +1,6 @@
 cask "agentsh" do
   version "0.16.11"
-  sha256 "195676fb812801206612a4fa7ed495de3366ad0b06b960ced653b4fe1c16280f"
+  sha256 "3a123a79c38d3dcae46feff7daa780af13efb14ce20aedced1c2673edcf2d7b7"
 
   url "https://github.com/canyonroad/agentsh/releases/download/v#{version}/AgentSH-v#{version}.dmg"
   name "AgentSH"
@@ -27,7 +27,7 @@ cask "agentsh" do
   ]
 
   postflight do
-    system "#{appdir}/AgentSH.app/Contents/MacOS/activate-extension"
+    system "#{appdir}/AgentSH.app/Contents/MacOS/agentsh", "activate-extension"
   end
 
   caveats <<~EOS
