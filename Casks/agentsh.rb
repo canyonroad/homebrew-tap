@@ -1,6 +1,6 @@
 cask "agentsh" do
   version "0.16.11"
-  sha256 "61bdea835e57538d0cde34d76a7ca0818b2c959c398523360624e366de0f64a4"
+  sha256 "195676fb812801206612a4fa7ed495de3366ad0b06b960ced653b4fe1c16280f"
 
   url "https://github.com/canyonroad/agentsh/releases/download/v#{version}/AgentSH-v#{version}.dmg"
   name "AgentSH"
@@ -27,11 +27,11 @@ cask "agentsh" do
   ]
 
   postflight do
-    system "open", "#{appdir}/AgentSH.app"
+    system "#{appdir}/AgentSH.app/Contents/MacOS/activate-extension"
   end
 
   caveats <<~EOS
-    AgentSH.app will open automatically after installation.
-    You will be prompted in System Settings to approve the system extension.
+    After installation you will be prompted to approve the AgentSH system extension.
+    Go to System Settings -> General -> Login Items & Extensions to allow it.
   EOS
 end
