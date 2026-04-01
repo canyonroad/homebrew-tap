@@ -1,6 +1,6 @@
 cask "agentsh" do
   version "0.16.11"
-  sha256 "57a3080e6017c610a9c5aafd1771e9b0a63652b2b2b8952efa9295d5ced3dced"
+  sha256 "1dd247ebd443fa70e95b1221973892cf09ca9eae877223eae4538512fb9088b7"
 
   url "https://github.com/canyonroad/agentsh/releases/download/v#{version}/AgentSH-v#{version}.dmg"
   name "AgentSH"
@@ -26,9 +26,12 @@ cask "agentsh" do
     "~/Library/LaunchAgents/ai.canyonroad.agentsh.daemon.plist",
   ]
 
+  postflight do
+    system "open", "#{appdir}/AgentSH.app"
+  end
+
   caveats <<~EOS
-    After installation, open AgentSH.app to activate the system extension:
-      open /Applications/AgentSH.app
-    You will be prompted in System Settings to approve the extension.
+    AgentSH.app will open automatically after installation.
+    You will be prompted in System Settings to approve the system extension.
   EOS
 end
