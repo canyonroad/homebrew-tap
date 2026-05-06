@@ -1,6 +1,6 @@
 cask "agentsh" do
-  version "0.19.1"
-  sha256 "69112c9912f5754f775ead29e761f9436aea04670fab390d9b0e4dbfb1883b8b"
+  version "0.19.2"
+  sha256 "548e80188a6a4408b729f2d4d48623e0819c601d1ab409e3329455345335b514"
 
   url "https://github.com/canyonroad/agentsh/releases/download/v#{version}/AgentSH-v#{version}.dmg"
   name "AgentSH"
